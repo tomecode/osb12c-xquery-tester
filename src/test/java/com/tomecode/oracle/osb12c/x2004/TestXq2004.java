@@ -73,4 +73,11 @@ public class TestXq2004 extends TestCase {
 		org.junit.Assert.assertEquals("<value><e xmlns:soap-env=\"http://schemas.xmlsoap.org/soap/envelope/\"><r/></e></value>", out);
 	}
 
+	public final void testArgFile() throws Exception {
+		Xquery xq = new XqueryExecutor().loadXquery(new File("src/test/resources/com/tomecode/oracle/osb12c/x2004/paramElement.xq").getAbsoluteFile());
+		xq.arg("input").fromFile(new File("src/test/resources/com/tomecode/oracle/osb12c/x2004/sample.xml").getAbsoluteFile()).toSoapBody();
+		String out = xq.execute().asXmlString();
+		org.junit.Assert.assertEquals("<value><helloWorld xmlns:soap-env=\"http://schemas.xmlsoap.org/soap/envelope/\"/></value>", out);
+	}
+
 }
