@@ -1,0 +1,2 @@
+<!--li class="list-group-item"><b>Test: </b>@{testName} <div class="testPhases"> @{phases} </div></li-->
+<li class="list-group-item"> <div class="testPhases"> @{phases} </div></li>

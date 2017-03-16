@@ -4,113 +4,11 @@
 	<groupId>com.tomecode.oracle.osb12c</groupId>
 	<artifactId>osb12c-xquery-tester</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-	<properties>
-		<wls12cHome>c:/Oracle/FMW12c1221/wlserver</wls12cHome>
-		<osb12cHome>c:/Oracle/FMW12c1221/osb</osb12cHome>
-		<common12cHome>c:/Oracle/FMW12c1221/oracle_common</common12cHome>
-	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>com.oracle.weblogic</groupId>
-			<artifactId>weblogic</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${wls12cHome}/server/lib/weblogic.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle.osb</groupId>
-			<artifactId>oracle.servicebus.configfwk</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${osb12cHome}/lib/modules/oracle.servicebus.configfwk.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle.osb</groupId>
-			<artifactId>oracle.servicebus.resources.xquery</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${osb12cHome}/lib/modules/oracle.servicebus.resources.xquery.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle.osb</groupId>
-			<artifactId>oracle.servicebus.services.core</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${osb12cHome}/lib/modules/oracle.servicebus.services.core.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle.osb</groupId>
-			<artifactId>oracle.servicebus.resources.core</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${osb12cHome}/lib/modules/oracle.servicebus.resources.core.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle.osb</groupId>
-			<artifactId>oracle.servicebus.kernel-api</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${osb12cHome}/lib/modules/oracle.servicebus.kernel-api.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle.osb</groupId>
-			<artifactId>com.bea.core.xquery.xmlbeans-interop_12.1.3.0</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${common12cHome}/modules/odsi_xquery2004_12.1.3/com.bea.core.xquery.xmlbeans-interop_12.1.3.0.jar</systemPath>
-		</dependency>
-
-		<dependency>
-			<groupId>com.oracle.common</groupId>
-			<artifactId>xqjapi</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${common12cHome}/modules/oracle.xdk/xqjapi.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle.common</groupId>
-			<artifactId>xqjapi</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${common12cHome}/modules/oracle.xdk/xqjapi.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle.common</groupId>
-			<artifactId>com.bea.core.xquery</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${common12cHome}/modules/com.bea.core.xquery_1.8.0.0.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle.common</groupId>
-			<artifactId>com.bea.core.binxml_12.1.3.0</artifactId>
-			<version>12c</version>
-			<scope>system</scope>
-			<systemPath>${common12cHome}/modules/odsi_xquery2004_12.1.3/com.bea.core.binxml_12.1.3.0.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-		</dependency>
-
-
-	</dependencies>
-
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	<modules>
+		<module>osb12c-xpath-helloworld</module>
+		<module>osb12c-xpath-uuid</module>
+		<module>osb12c-xquery-unit-tester</module>
+	</modules>
 </project>

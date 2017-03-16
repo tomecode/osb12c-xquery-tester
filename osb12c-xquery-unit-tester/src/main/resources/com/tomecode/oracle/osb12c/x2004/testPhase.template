@@ -1,0 +1,4 @@
+<div class="file">
+<div class="file-header"><div class="file-info"><span class="file-mode"><b>@{title}</b> @{location}</span></div></div>
+<div class="fileContent"><pre style="margin-bottom: 0px;margin-top: 0px;"><code class="@{type}">@{content}</code></pre></div>
+</div>

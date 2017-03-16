@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1 http://maven.apache.org/xsd/assembly-1.1.1.xsd ">
+	<id>zip</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+
+	<files>
+		<file>
+			<source>target/${project.build.finalName}.jar</source>
+			<destName>${project.build.finalName}.jar</destName>
+			<outputDirectory>/</outputDirectory>
+		</file>
+	</files>
+
+	<fileSets>
+		<fileSet>
+			<directory>${project.basedir}/src/main/resources</directory>
+			<outputDirectory/>
+			<includes>
+				<include>*.xml</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+	<!--dependencySets>
+		<dependencySet>
+			<includes>
+				<include>integration-suite.slsp.sb-11g.domain-components:sb-bridges</include>
+			</includes>
+		</dependencySet>
+	</dependencySets-->
+
+</assembly>

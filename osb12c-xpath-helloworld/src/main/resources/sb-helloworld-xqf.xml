@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpf:xpathFunctions xmlns:xpf="http://www.bea.com/wli/sb/xpath/config">
+	<xpf:category id="">
+		<xpf:function>
+			<xpf:name>hello</xpf:name>
+			<xpf:comment></xpf:comment>
+			<xpf:namespaceURI>http://www.bea.com/xquery/xquery-functions</xpf:namespaceURI>
+			<xpf:className>com.tomecode.oracle.osb12c.xpath.HelloWorldFunction</xpf:className>
+			<xpf:method>java.lang.String hello(java.lang.String)</xpf:method>
+			<xpf:isDeterministic>true</xpf:isDeterministic>
+			<xpf:scope>Pipeline</xpf:scope>
+		</xpf:function>
+	</xpf:category>
+</xpf:xpathFunctions>
