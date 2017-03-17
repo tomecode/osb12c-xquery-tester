@@ -5,6 +5,7 @@
 	<artifactId>osb12c-xquery-unit-tester</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>OSB 12c XQuery Tester</name>
+	<packaging>jar</packaging>
 
 	<properties>
 		<wls12cHome>c:/Oracle/FMW12c1221/wlserver</wls12cHome>
