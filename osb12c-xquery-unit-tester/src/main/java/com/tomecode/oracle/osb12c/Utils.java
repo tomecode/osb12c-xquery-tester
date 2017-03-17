@@ -78,20 +78,31 @@ public final class Utils {
 	}
 
 	public static final String prettyFormatXml(InputStream newInputStream) {
+		if (newInputStream == null) {
+			return null;
+		}
 		return formatXml(new StreamSource(newInputStream));
 	}
 
 	public final static String prettyFormatXml(String input) {
+		if (input == null) {
+			return null;
+		}
 		return formatXml(new StreamSource(new StringReader(input)));
 	}
 
 	public final static String prettyFormatXml(Node input) {
+		if (input == null) {
+			return null;
+		}
 		return formatXml(new DOMSource(input));
 	}
 
 	private final static String formatXml(Source xmlInput) {
-		try {
-			StringWriter stringWriter = new StringWriter();
+		if (xmlInput == null) {
+			return null;
+		}
+		try (StringWriter stringWriter = new StringWriter()) {
 			StreamResult xmlOutput = new StreamResult(stringWriter);
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
 			// transformerFactory.setAttribute("indent-number", 2);

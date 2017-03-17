@@ -2,6 +2,7 @@ package com.tomecode.oracle.osb12c.x2004;
 
 import java.io.File;
 
+import org.apache.xmlbeans.XmlObject;
 import org.w3c.dom.Node;
 
 /**
@@ -89,6 +90,8 @@ public interface XqueryArgument {
 	 *
 	 */
 	public interface XqueryArgumentXml {
+
+		XmlObject node();
 
 		void toSoapBody() throws Exception;
 	}

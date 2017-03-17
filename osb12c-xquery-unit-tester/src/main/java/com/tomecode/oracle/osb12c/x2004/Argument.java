@@ -115,14 +115,8 @@ final class Argument implements XqueryArgument {
 	}
 
 	public final String contentAsXml() throws Exception {
-		if (content != null) {
-			if (content instanceof XmlObject) {
-				return Utils.prettyFormatXml(((XmlObject) content).newInputStream());
-			} else if (content instanceof Node) {
-				return Utils.prettyFormatXml(XmlObject.Factory.parse((Node) content).xmlText());
-			} else if (content instanceof String) {
-				return Utils.prettyFormatXml(Utils.toElement(String.valueOf(content)));
-			}
+		if (xml != null && xml.node() != null) {
+			return Utils.prettyFormatXml(xml.node().xmlText());
 		}
 		return null;
 	}
@@ -157,6 +151,11 @@ final class Argument implements XqueryArgument {
 			preparedStatement.setComplex(name, ApacheXmlBeansUtil.toTokenIterator(inputCur.getObject()));
 
 			inputCur.dispose();
+		}
+
+		@Override
+		public final XmlObject node() {
+			return this.node;
 		}
 	}
 
