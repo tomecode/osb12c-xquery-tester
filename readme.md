@@ -2,7 +2,7 @@
 
 A simple utility that uses the internal OSB XQuery engine for testing XQuery transformations.
 
-- DSL executing XQuery transforamtion (OSB 11g and OSB 12c)
+- DSL for testing XQuery transformation in OSB 11g/12c
 - Extension for JUnit Test Case
 - Testing custom (or OSB build in) xpath functions
 - Generating HTML report
