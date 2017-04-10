@@ -56,3 +56,5 @@ public class TestHello extends TestCaseX2004 {
 	}
 }
 ```
+
+This project is member of [OSB utilities](https://github.com/tomecode/osb-utilities)
